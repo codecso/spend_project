@@ -12,7 +12,7 @@ class Tag
 
   def save()
     sql = "INSERT INTO tags (name) VALUES ($1) RETURNING id"
-    values = [@id]
+    values = [@name]
     result = SqlRunner.run(sql, values)
     @id = result[0]["id"]
   end
