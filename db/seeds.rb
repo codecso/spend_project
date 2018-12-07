@@ -23,11 +23,19 @@ groceries.save()
 transaction1 = Transaction.new({
   'merchant_id' => tesco.id(),
   'tag_id' => groceries.id(),
-  'timing' => '23/08/2018',
+  'timing' => '2018/08/23',
   'amount' => 20
   })
 
+  transaction2 = Transaction.new({
+    'merchant_id' => tesco.id(),
+    'tag_id' => groceries.id(),
+    'timing' => '2018/08/03',
+    'amount' => 10
+    })
+
 transaction1.save()
+transaction2.save()
 
 binding.pry
 
