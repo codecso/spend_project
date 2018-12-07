@@ -4,9 +4,9 @@ require_relative('../models/transaction.rb')
 
 require('pry')
 
-# Merchant.deleteall()
-# Tag.deleteall()
-# Transaction.deleteall()
+Merchant.delete_all()
+Tag.delete_all()
+Transaction.delete_all()
 
 tesco = Merchant.new({
   'name' => 'Tesco'
