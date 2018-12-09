@@ -1,0 +1,24 @@
+<p>
+  <a href="/transactions">Transactions</a>
+  <a href="/merchants">Merchants</a>
+  <a href="/tags">Tags</a>
+</p>
+
+<h1>Tags</h1>
+
+<table>
+  <tr>
+    <th>Tag ID</th>
+    <th></th>
+    <th>Tag</th>
+  </tr>
+
+  <% for tag in @tags %>
+  <tr>
+    <td><%= tag.id %></td>
+    <td></td>
+    <td><%= tag.name %></td>
+  </tr>
+  <% end %>
+
+</table>
