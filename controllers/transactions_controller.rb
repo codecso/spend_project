@@ -18,6 +18,29 @@ get '/transactions/new' do
 end
 
 post '/transactions' do
-  Transaction.new(params).save
+  Transaction.new(params).save()
   redirect to '/transactions'
+end
+
+get '/transactions/:id' do
+  @transaction = Transaction.find(params['id'])
+  erb(:"transactions/show")
+end
+
+get '/transactions/:id/edit' do
+  @merchants = Merchant.all()
+  @tags = Tag.all()
+  @transaction = Transaction.find(params['id'])
+  erb(:"transactions/edit")
+end
+
+post '/transactions/:id' do
+  Transaction.new(params).update()
+  redirect to "/transactions/#{params['id']}"
+end
+
+post '/transactions/:id/delete' do
+  transaction = Transaction.find(params['id'])
+  transaction.delete()
+  redirect to ('/transactions')
 end

@@ -10,6 +10,7 @@ get '/tags' do
 end
 
 post '/tags/:id/delete' do
-  Tag.delete(params[:id])
+  tag = Tag.find(params['id'])
+  tag.delete()
   redirect to('/tags')
 end
