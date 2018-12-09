@@ -30,6 +30,18 @@
     <td>#<%= transaction.tag.name %></td>
     <td></td>
     <td><%= transaction.amount %></td>
+    <td></td>
+    <td>
+      <form action="/transactions/<%=transaction.id%>/edit" method="POST">
+        <input type="submit" value="edit">
+      </form>
+    </td>
+    <td></td>
+    <td>
+      <form action="/transactions/<%=transaction.id%>/delete" method="POST">
+        <input type="submit" value="delete">
+      </form>
+    </td>
   </tr>
 
   <% end %>
