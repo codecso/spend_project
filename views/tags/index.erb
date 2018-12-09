@@ -18,6 +18,12 @@
     <td><%= tag.id %></td>
     <td></td>
     <td><%= tag.name %></td>
+    <td></td>
+    <td>
+      <form action="/tags/<%=tag.id%>/delete" method="POST">
+        <input type="submit" value="delete">
+      </form>
+    </td>
   </tr>
   <% end %>
 

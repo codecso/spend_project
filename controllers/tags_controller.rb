@@ -8,3 +8,8 @@ get '/tags' do
   @tags = Tag.all()
   erb(:"tags/index")
 end
+
+post '/tags/:id/delete' do
+  Tag.delete(params[:id])
+  redirect to('/tags')
+end

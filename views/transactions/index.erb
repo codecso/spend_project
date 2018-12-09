@@ -6,17 +6,31 @@
 
 <h1>Transaction History</h1>
 
-<ul>
-  <li>
-    <p>Transaction ID</p>
-    <p>Date</p>
-    <p>Merchant</p>
-    <p>Tags</p>
-    <p>Amount</p>
-  </li>
+<table>
+  <tr>
+    <th>Transaction ID</th>
+    <th></th>
+    <th>Date</th>
+    <th></th>
+    <th>Merchant</th>
+    <th></th>
+    <th>Tags</th>
+    <th></th>
+    <th>Amount</th>
+  </tr>
 
   <% for transaction in @transactions %>
-  <p><%= transaction.id %> <%= transaction.timing %> <%= transaction.merchant.name %> #<%= transaction.tag.name %> <%= transaction.amount %></p>
+  <tr>
+    <td><%= transaction.id %></td>
+    <td></td>
+    <td><%= transaction.timing %></td>
+    <td></td>
+    <td><%= transaction.merchant.name %></td>
+    <td></td>
+    <td>#<%= transaction.tag.name %></td>
+    <td></td>
+    <td><%= transaction.amount %></td>
+  </tr>
 
   <% end %>
-</ul>
+</table>

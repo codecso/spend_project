@@ -8,3 +8,8 @@ get '/merchants' do
   @merchants = Merchant.all()
   erb(:"merchants/index")
 end
+
+post '/merchants/:id/delete' do
+  Merchant.delete(params[:id])
+  redirect to('/merchants')
+end
