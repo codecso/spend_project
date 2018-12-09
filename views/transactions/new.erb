@@ -10,11 +10,21 @@
   <label for="timing">Date (YYYY/MM/DD)</label>
   <input type="text" name="timing">
 
-  <label for="transaction.merchant.name">Merchant</label>
-  <input type="text" name="transaction.merchant.name">
+  <label for="merchant_id">Merchant</label>
+  <input list="merchant_id">
+  <datalist id="merchant_id">
+    <% for merchant in @merchants %>
+    <option value="<%=merchant.name%>"></option>
+    <% end %>
+  </datalist>
 
-  <label for="transaction.tag.name">Tag</label>
-  <input type="text" name="transaction.tag.name">
+  <label for="tag_id">Tags</label>
+  <input list="tag_id">
+  <datalist id="tag_id">
+    <% for tag in @tags %>
+    <option value="<%=tag.name%>"></option>
+    <% end %>
+  </datalist>
 
   <label for="amount">Amount</label>
   <input type="number" name="amount">
