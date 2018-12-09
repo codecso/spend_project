@@ -1,15 +1,22 @@
-<p class="btn--wrapper">
-  <a class="btn btn--action" href="/transations/new">Add Transaction</a>
-  <a class="btn btn--action" href="/merchants/edit">Edit Merchants</a>
-  <a class="btn btn--action" href="/tags/edit">Edit Tags</a>
+<p>
+  <a href="/transactions/new">Add Transaction</a>
+  <a href="/merchants/edit">Edit Merchants</a>
+  <a href="/tags/edit">Edit Tags</a>
 </p>
 
 <h1>Transaction History</h1>
 
 <ul>
-  <% for transaction in @transactions %>
   <li>
-    <p><%= transaction.id %> <%= transaction.timing %> <%= transaction.merchant.name %> <%= transaction.tag.name %> <%= transaction.amount %></p>
+    <p>Transaction ID</p>
+    <p>Date</p>
+    <p>Merchant</p>
+    <p>Tags</p>
+    <p>Amount</p>
   </li>
+
+  <% for transaction in @transactions %>
+  <p><%= transaction.id %> <%= transaction.timing %> <%= transaction.merchant.name %> #<%= transaction.tag.name %> <%= transaction.amount %></p>
+
   <% end %>
 </ul>
