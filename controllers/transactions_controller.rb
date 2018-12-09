@@ -11,8 +11,8 @@ get '/transactions' do
   erb (:"transactions/index")
 end
 
-get '/transactions/new' do
-  @merchants = Merchant.all()
-  @tags = Tag.all()
-  erb (:"transactions/new")
-end
+# get '/transactions/new' do
+#   @merchants = Merchant.all()
+#   @tags = Tag.all()
+#   erb (:"transactions/new")
+# end

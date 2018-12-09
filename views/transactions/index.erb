@@ -5,3 +5,11 @@
 </p>
 
 <h1>Transaction History</h1>
+
+<ul>
+  <% for transaction in @transactions %>
+  <li>
+    <p><%= transaction.id %> <%= transaction.timing %> <%= transaction.merchant.name %> <%= transaction.tag.name %> <%= transaction.amount %></p>
+  </li>
+  <% end %>
+</ul>
