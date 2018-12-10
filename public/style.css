@@ -1,6 +1,13 @@
 .bottom_info{
   position: fixed;
   bottom: 0;
+  background-color: green;
+  color: white;
+}
+
+.top_info{
+  background-color: green;
+  color: white;
 }
 
 ul {
