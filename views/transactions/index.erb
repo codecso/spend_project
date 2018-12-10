@@ -43,6 +43,24 @@
       </form>
     </td>
   </tr>
-
   <% end %>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Total</td>
+    <td></td>
+    <% total = 0 %>
+    <% for transaction in @transactions %>
+    <% total = total + transaction.amount() %>
+    <% end %>
+  <td><%=total%></td>
+    </tr>
+
+
+
 </table>

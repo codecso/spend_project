@@ -6,7 +6,10 @@
 
 <h1>Edit Merchant: <%=@merchant.name%></h1>
 
-<form action="/merchants/<%=@merchant.id%>" method="post">
+<form action="/merchants/<%=@merchant.id%>" method="POST">
+  <label for="id">Merchant ID: </label>
+  <label name="id"><%=@merchant.id%></label>
+
   <label for="name">Name</label>
   <input type="text" name="name" value="<%=@merchant.name%>">
 
