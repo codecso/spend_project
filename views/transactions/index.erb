@@ -32,7 +32,7 @@
     <td><%= transaction.amount %></td>
     <td></td>
     <td>
-      <form action="/transactions/<%=transaction.id%>/edit" method="POST">
+      <form action="/transactions/<%=transaction.id%>/edit" method="GET">
         <input type="submit" value="edit">
       </form>
     </td>
