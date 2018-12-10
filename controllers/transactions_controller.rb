@@ -36,7 +36,7 @@ end
 
 post '/transactions/:id' do
   Transaction.new(params).update()
-  redirect to "/transactions/#{params['id']}"
+  redirect to "/transactions"
 end
 
 post '/transactions/:id/delete' do
