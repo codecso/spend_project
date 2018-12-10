@@ -9,6 +9,15 @@ get '/tags' do
   erb(:"tags/index")
 end
 
+get '/tags/new' do
+  erb (:"tags/new")
+end
+
+post '/tags' do
+  Tag.new(params).save()
+  redirect to '/tags'
+end
+
 get '/tags/:id' do
   @tag = Tag.find(params['id'])
   erb(:"tags/show")
