@@ -21,7 +21,7 @@
 
   <% for transaction in @transactions %>
   <tr>
-    <td><%= transaction.id %></td>
+    <td><a href="/transactions/<%=transaction.id%>"><%= transaction.id %></a></td>
     <td></td>
     <td><%= transaction.timing %></td>
     <td></td>

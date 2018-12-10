@@ -1,3 +1,9 @@
+<p>
+  <a href="/transactions">Transactions</a>
+  <a href="/merchants">Merchants</a>
+  <a href="/tags">Tags</a>
+</p>
+
 <h1>Edit <%= @transaction.id %></h1>
 
 <form action="/transactions/<%=@transaction.id%>" method="post">
@@ -5,16 +11,20 @@
   <input type="text" name="timing" value="<%=@transaction.timing%>">
 
   <label for="merchant_id">Merchant</label>
-  <input type="text" name="merchant_id">
-  <% for merchant in @merchants %>
-  <option <%= 'selected' if merchant.id == @transaction.merchant_id %> value="<%=merchant.id%>"><%=merchant.name%></option>
-  <% end %>
+  <input list="merchant_id">
+  <datalist id="merchant_id">
+    <% for merchant in @merchants %>
+    <option value="<%=merchant.id%>"><%=merchant.name%></option>
+    <% end %>
+  </datalist>
 
-  <label for="tag_id">Tag</label>
-  <input type="text" name="tag_id">
-  <% for tag in @tags %>
-  <option <%= 'selected' if tag.id == @transaction.tag_id %> value="<%=tag.id%>"><%=tag.name%></option>
-  <% end %>
+  <label for="tag_id">Tags</label>
+  <input list="tag_id">
+  <datalist id="tag_id">
+    <% for tag in @tags %>
+    <option value="<%=tag.id%>"><%=tag.name%></option>
+    <% end %>
+  </datalist>
 
   <label for="amount">Amount</label>
   <input type="number" name="amount" value="<%=@transaction.amount%>">

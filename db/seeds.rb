@@ -14,6 +14,12 @@ tesco = Merchant.new({
 
 tesco.save()
 
+asda = Merchant.new({
+  'name' => 'Asda'
+  })
+
+  asda.save()
+
 groceries = Tag.new({
   'name' => 'groceries'
   })
@@ -28,7 +34,7 @@ transaction1 = Transaction.new({
   })
 
   transaction2 = Transaction.new({
-    'merchant_id' => tesco.id(),
+    'merchant_id' => asda.id(),
     'tag_id' => groceries.id(),
     'timing' => '2018/08/03',
     'amount' => 10

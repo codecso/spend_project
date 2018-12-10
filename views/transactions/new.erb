@@ -14,7 +14,7 @@
   <input list="merchant_id">
   <datalist id="merchant_id">
     <% for merchant in @merchants %>
-    <option value="<%=merchant.name%>"></option>
+    <option value="<%=merchant.id%>"><%=merchant.name%></option>
     <% end %>
   </datalist>
 
@@ -22,7 +22,7 @@
   <input list="tag_id">
   <datalist id="tag_id">
     <% for tag in @tags %>
-    <option value="<%=tag.name%>"></option>
+    <option value="<%=tag.id%>"><%=tag.name%></option>
     <% end %>
   </datalist>
 

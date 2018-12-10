@@ -9,8 +9,13 @@ get '/tags' do
   erb(:"tags/index")
 end
 
+get '/tags/:id' do
+  @tag = Tag.find(params['id'])
+  erb(:"tags/show")
+end
+
 post '/tags/:id/delete' do
-  tag = Tag.find(params[:id])
+  tag = Tag.find(params['id'])
   tag.delete()
   redirect to ('/tags')
 end

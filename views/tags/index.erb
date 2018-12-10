@@ -15,7 +15,7 @@
 
   <% for tag in @tags %>
   <tr>
-    <td><%= tag.id %></td>
+    <td><a href="/tags/<%=tag.id%>"><%=tag.id%></a></td>
     <td></td>
     <td><%= tag.name %></td>
     <td></td>
