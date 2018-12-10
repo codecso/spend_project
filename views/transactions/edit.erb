@@ -14,20 +14,18 @@
   <input type="text" name="timing" value="<%=@transaction.timing%>">
 
   <label for="merchant_id">Merchant</label>
-  <input list="merchant_id">
-  <datalist id="merchant_id">
+  <select name="merchant_id">
     <% for merchant in @merchants %>
-    <option value="<%=merchant.id%>"><%=merchant.name%></option>
+    <option <%= 'selected' if merchant.id == @transaction.merchant_id %> value="<%=merchant.id%>"><%=merchant.name%></option>
     <% end %>
-  </datalist>
+  </select>
 
   <label for="tag_id">Tags</label>
-  <input list="tag_id">
-  <datalist id="tag_id">
+  <select name="tag_id">
     <% for tag in @tags %>
-    <option value="<%=tag.id%>"><%=tag.name%></option>
+    <option <%= 'selected' if tag.id == @transaction.tag_id %> value="<%=tag.id%>"><%=tag.name%></option>
     <% end %>
-  </datalist>
+  </select>
 
   <label for="amount">Amount</label>
   <input type="number" name="amount" value="<%=@transaction.amount%>">
