@@ -6,6 +6,7 @@ body{
 
 .top_info{
   background-color: green;
+  width: 100%;
 }
 
 .top_info a{
