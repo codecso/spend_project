@@ -9,8 +9,13 @@ body{
 }
 
 .top_info a{
+  text-decoration: none;
   font-size: 18px;
   color: white;
+}
+
+.small_logo{
+  float: right;
 }
 
 .bottom_footer{
@@ -22,10 +27,13 @@ body{
 }
 
 .bottom_footer a{
+  text-decoration: none;
   color: white;
 }
 
 .bottom_info_row{
+  justify-content: center;
+  align-items: center;
   display: flex;
 }
 
@@ -33,8 +41,19 @@ body{
   text-align: center;
 }
 
+.front_page_logo{
+  text-align: center;
+}
+
 .enter_tracker_container{
   text-align: center;
+  display: inline;
+  background-color: green;
+}
+
+.enter_tracker_container a{
+  text-decoration: none;
+  color: white;
 }
 
 .table_container{
@@ -46,6 +65,7 @@ ul li{
 }
 
 ul li a{
+  text-decoration: none;
   font-size: 18px;
 }
 
