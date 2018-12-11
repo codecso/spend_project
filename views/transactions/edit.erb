@@ -5,13 +5,10 @@
 </div>
 
 <div class="container">
-  <h1>Edit Transaction ID: <%= @transaction.id %></h1>
+  <h1>Edit Transaction #<%= @transaction.id %></h1>
 
   <form action="/transactions/<%=@transaction.id%>" method="POST">
-    <label for="id">Transaction ID: </label>
-    <label name="id"><%=@transaction.id%></label>
-
-    <label for="timing">Date (YYYY/MM/DD)</label>
+    <label for="timing">Date</label>
     <input type="date" name="timing" value="<%=@transaction.timing%>">
 
     <label for="merchant_id">Merchant</label>
