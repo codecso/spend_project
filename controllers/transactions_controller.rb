@@ -22,6 +22,16 @@ post '/transactions' do
   redirect to '/transactions'
 end
 
+get '/transactions/ascending' do
+  @transactions = Transaction.transaction_date_ascending()
+  erb (:"transactions/index")
+end
+
+get '/transactions/descending' do
+  @transactions = Transaction.transaction_date_descending()
+  erb (:"transactions/index")
+end
+
 get '/transactions/:id' do
   @transaction = Transaction.find(params['id'])
   erb(:"transactions/show")
@@ -32,11 +42,6 @@ get '/transactions/:id/edit' do
   @tags = Tag.all()
   @transaction = Transaction.find(params['id'])
   erb(:"transactions/edit")
-end
-
-post '/transactions/ascending' do
-
-  redirect to ('/transactions')
 end
 
 post '/transactions/:id' do

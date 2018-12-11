@@ -10,14 +10,16 @@
   <div class="table_container">
     <table>
       <tr>
-        <td>Order by</td>
+        <td>Order Date</td>
         <td>
-          <form action="/transactions/ascending" method="POST">
+          <form action="/transactions/ascending" method="GET">
             <input type="submit" value="ascending">
           </form>
         </td>
         <td>
-
+          <form action="/transactions/descending" method="GET">
+            <input type="submit" value="descending">
+          </form>
         </td>
       </tr>
       <tr>

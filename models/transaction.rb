@@ -66,10 +66,15 @@ class Transaction
     return Tag.new(result.first)
   end
 
-  def transaction_date()
+  def self.transaction_date_ascending()
     sql = "SELECT * FROM transactions ORDER BY timing"
-    values = [@timing]
-    results = SqlRunner.run(sql, values)
+    results = SqlRunner.run(sql)
+    return results.map {|transaction_hash| Transaction.new(transaction_hash)}
+  end
+
+  def self.transaction_date_descending()
+    sql = "SELECT * FROM transactions ORDER BY timing DESC"
+    results = SqlRunner.run(sql)
     return results.map {|transaction_hash| Transaction.new(transaction_hash)}
   end
 
