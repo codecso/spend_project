@@ -2,6 +2,15 @@ body{
   margin: 0px;
   padding: 0px;
   border: 0px;
+  background-image: url('/images/green_background.png');
+  fill: green;
+}
+
+.front_page_logo img{
+  background-color: green;
+  border-radius: 10px;
+  padding: 0px;
+  margin-top: 5px;
 }
 
 .top_info{
@@ -11,7 +20,7 @@ body{
 
 .top_info a{
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
 }
 
@@ -42,6 +51,13 @@ body{
   text-align: center;
 }
 
+.title_container{
+  background-color: white;
+}
+.table_container{
+  background-color: white;
+}
+
 .front_page_logo{
   text-align: center;
 }
@@ -50,6 +66,8 @@ body{
   text-align: center;
   display: inline;
   background-color: green;
+  border-radius: 5px;
+  padding: 2px;
 }
 
 .enter_tracker_container a{

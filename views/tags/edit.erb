@@ -6,7 +6,9 @@
 </div>
 
 <div class="container">
-  <h1>Edit Tag: <%=@tag.name%></h1>
+  <div class="title_container">
+    <h1>Edit Tag: <%=@tag.name%></h1>
+  </div>
 
   <form action="/tags/<%=@tag.id%>" method="POST">
     <label for="id">Tag ID: </label>

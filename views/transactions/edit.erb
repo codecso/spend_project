@@ -6,7 +6,9 @@
 </div>
 
 <div class="container">
-  <h1>Edit Transaction #<%= @transaction.id %></h1>
+  <div class="title_container">
+    <h1>Edit Transaction #<%= @transaction.id %></h1>
+  </div>
 
   <form action="/transactions/<%=@transaction.id%>" method="POST">
     <label for="timing">Date</label>

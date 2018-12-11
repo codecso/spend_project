@@ -6,7 +6,9 @@
 </div>
 
 <div class="container">
-  <h1>Edit Merchant: <%=@merchant.name%></h1>
+  <div class="title_container">
+    <h1>Edit Merchant: <%=@merchant.name%></h1>
+  </div>
 
   <form action="/merchants/<%=@merchant.id%>" method="POST">
     <label for="id">Merchant ID: </label>

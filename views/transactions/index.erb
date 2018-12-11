@@ -6,7 +6,9 @@
 </div>
 
 <div class="container">
-  <h1>Transaction History</h1>
+  <div class="title_container">
+    <h1>Transaction History</h1>
+  </div>
 
   <div class="table_container">
     <table>
@@ -45,7 +47,7 @@
         <td></td>
         <td><%= transaction.tag.name %></td>
         <td></td>
-        <td><%= transaction.amount %></td>
+        <td>£<%= transaction.amount %></td>
         <td></td>
         <td>
           <form action="/transactions/<%=transaction.id%>/edit" method="GET">
@@ -74,7 +76,7 @@
         <% for transaction in @transactions %>
         <% total = total + transaction.amount() %>
         <% end %>
-        <td><%=total%></td>
+        <td>£<%=total%></td>
       </tr>
 
     </table>
