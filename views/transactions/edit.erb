@@ -4,32 +4,34 @@
   <a href="/tags">Tags</a>
 </div>
 
-<h1>Edit Transaction ID: <%= @transaction.id %></h1>
+<div class="container">
+  <h1>Edit Transaction ID: <%= @transaction.id %></h1>
 
-<form action="/transactions/<%=@transaction.id%>" method="POST">
-  <label for="id">Transaction ID: </label>
-  <label name="id"><%=@transaction.id%></label>
+  <form action="/transactions/<%=@transaction.id%>" method="POST">
+    <label for="id">Transaction ID: </label>
+    <label name="id"><%=@transaction.id%></label>
 
-  <label for="timing">Date (YYYY/MM/DD)</label>
-  <input type="date" name="timing" value="<%=@transaction.timing%>">
+    <label for="timing">Date (YYYY/MM/DD)</label>
+    <input type="date" name="timing" value="<%=@transaction.timing%>">
 
-  <label for="merchant_id">Merchant</label>
-  <select name="merchant_id">
-    <% for merchant in @merchants %>
-    <option <%= 'selected' if merchant.id == @transaction.merchant_id %> value="<%=merchant.id%>"><%=merchant.name%></option>
-    <% end %>
-  </select>
+    <label for="merchant_id">Merchant</label>
+    <select name="merchant_id">
+      <% for merchant in @merchants %>
+      <option <%= 'selected' if merchant.id == @transaction.merchant_id %> value="<%=merchant.id%>"><%=merchant.name%></option>
+      <% end %>
+    </select>
 
-  <label for="tag_id">Tags</label>
-  <select name="tag_id">
-    <% for tag in @tags %>
-    <option <%= 'selected' if tag.id == @transaction.tag_id %> value="<%=tag.id%>"><%=tag.name%></option>
-    <% end %>
-  </select>
+    <label for="tag_id">Tags</label>
+    <select name="tag_id">
+      <% for tag in @tags %>
+      <option <%= 'selected' if tag.id == @transaction.tag_id %> value="<%=tag.id%>"><%=tag.name%></option>
+      <% end %>
+    </select>
 
-  <label for="amount">Amount</label>
-  <input type="number" name="amount" value="<%=@transaction.amount%>">
+    <label for="amount">Amount</label>
+    <input type="number" name="amount" value="<%=@transaction.amount%>">
 
 
-  <input type="submit" value="Save">
-</form>
+    <input type="submit" value="Save">
+  </form>
+</div>

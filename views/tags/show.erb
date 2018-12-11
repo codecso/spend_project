@@ -5,31 +5,35 @@
   <a href="/tags">Tags</a>
 </div>
 
-<h1>Tag: <%=@tag.name%></h1>
+<div class="container">
+  <h1>Tag: <%=@tag.name%></h1>
 
-<table>
-  <tr>
-    <th>Tag ID</th>
-    <th></th>
-    <th>Tag</th>
-  </tr>
+  <div class="table_container">
+    <table>
+      <tr>
+        <th>Tag ID</th>
+        <th></th>
+        <th>Tag</th>
+      </tr>
 
-  <tr>
-    <td><%= @tag.id %></td>
-    <td></td>
-    <td><%= @tag.name %></td>
-    <td></td>
-    <td>
-      <form action="/tags/<%=@tag.id%>/edit" method="GET">
-        <input type="submit" value="edit">
-      </form>
-    </td>
-    <td></td>
-    <td>
-      <form action="/tags/<%=@tag.id%>/delete" method="POST">
-        <input type="submit" value="delete">
-      </form>
-    </td>
-  </tr>
+      <tr>
+        <td><%= @tag.id %></td>
+        <td></td>
+        <td><%= @tag.name %></td>
+        <td></td>
+        <td>
+          <form action="/tags/<%=@tag.id%>/edit" method="GET">
+            <input type="submit" value="edit">
+          </form>
+        </td>
+        <td></td>
+        <td>
+          <form action="/tags/<%=@tag.id%>/delete" method="POST">
+            <input type="submit" value="delete">
+          </form>
+        </td>
+      </tr>
 
-</table>
+    </table>
+  </div>
+</div>

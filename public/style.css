@@ -1,3 +1,8 @@
+.top_info{
+  background-color: green;
+  color: white;
+}
+
 .bottom_footer{
   position: fixed;
   bottom: 0;
@@ -5,19 +10,27 @@
   color: white;
 }
 
-.top_info{
-  background-color: green;
-  color: white;
+.bottom_info_row{
+  display: flex;
 }
 
-ul {
+.container{
+  text-align: center;
+}
+
+.table_container{
+  display: inline-block;
+}
+
+ul li{
   overflow: hidden;
 }
 
-ul li {
-  display: inline;
+ul li a{
+  font-size: 18px;
+  font-weight: bold;
 }
 
-ul li p {
-  display: inline;
+p {
+  font-size: 18px;
 }

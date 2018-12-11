@@ -4,29 +4,31 @@
   <a href="/tags">Tags</a>
 </div>
 
-<h1>Add Transaction</h1>
+<div class="container">
+  <h1>Add Transaction</h1>
 
-<form action="/transactions" method="post">
-  <label for="timing">Date (YYYY/MM/DD)</label>
-  <input type="date" name="timing">
+  <form action="/transactions" method="post">
+    <label for="timing">Date (YYYY/MM/DD)</label>
+    <input type="date" name="timing">
 
-  <label for="merchant_id">Merchant</label>
-  <select name="merchant_id">
-    <% for merchant in @merchants %>
-    <option value="<%=merchant.id%>"><%=merchant.name%></option>
-    <% end %>
-  </select>
+    <label for="merchant_id">Merchant</label>
+    <select name="merchant_id">
+      <% for merchant in @merchants %>
+      <option value="<%=merchant.id%>"><%=merchant.name%></option>
+      <% end %>
+    </select>
 
-  <label for="tag_id">Tags</label>
-  <select name="tag_id">
-    <% for tag in @tags %>
-    <option value="<%=tag.id%>"><%=tag.name%></option>
-    <% end %>
-  </select>
+    <label for="tag_id">Tags</label>
+    <select name="tag_id">
+      <% for tag in @tags %>
+      <option value="<%=tag.id%>"><%=tag.name%></option>
+      <% end %>
+    </select>
 
-  <label for="amount">Amount</label>
-  <input type="number" name="amount">
+    <label for="amount">Amount</label>
+    <input type="number" name="amount">
 
-  <input type="submit" value="Save">
+    <input type="submit" value="Save">
 
-</form>
+  </form>
+</div>

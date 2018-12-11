@@ -5,31 +5,35 @@
   <a href="/tags">Tags</a>
 </div>
 
-<h1>Merchant: <%=@merchant.name%></h1>
+<div class="container">
+  <h1>Merchant: <%=@merchant.name%></h1>
 
-<table>
-  <tr>
-    <th>Merchant ID</th>
-    <th></th>
-    <th>Merchant</th>
-  </tr>
+  <div class="table_container">
+    <table>
+      <tr>
+        <th>Merchant ID</th>
+        <th></th>
+        <th>Merchant</th>
+      </tr>
 
-  <tr>
-    <td><%= @merchant.id %></td>
-    <td></td>
-    <td><%= @merchant.name %></td>
-    <td></td>
-    <td>
-      <form action="/merchants/<%=@merchant.id%>/edit" method="GET">
-        <input type="submit" value="edit">
-      </form>
-    </td>
-    <td></td>
-    <td>
-      <form action="/merchants/<%=@merchant.id%>/delete" method="POST">
-        <input type="submit" value="delete">
-      </form>
-    </td>
-  </tr>
+      <tr>
+        <td><%= @merchant.id %></td>
+        <td></td>
+        <td><%= @merchant.name %></td>
+        <td></td>
+        <td>
+          <form action="/merchants/<%=@merchant.id%>/edit" method="GET">
+            <input type="submit" value="edit">
+          </form>
+        </td>
+        <td></td>
+        <td>
+          <form action="/merchants/<%=@merchant.id%>/delete" method="POST">
+            <input type="submit" value="delete">
+          </form>
+        </td>
+      </tr>
 
-</table>
+    </table>
+  </div>
+</div>
