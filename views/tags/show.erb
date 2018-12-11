@@ -14,12 +14,16 @@
         <th>Tag ID</th>
         <th></th>
         <th>Tag</th>
+        <th></th>
+        <th># of Transactions</th>
       </tr>
 
       <tr>
         <td><%= @tag.id %></td>
         <td></td>
         <td><%= @tag.name %></td>
+        <td></td>
+        <td><%= @tag.transaction_count%></td>
         <td></td>
         <td>
           <form action="/tags/<%=@tag.id%>/edit" method="GET">

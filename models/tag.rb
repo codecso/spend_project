@@ -54,4 +54,11 @@ class Tag
     return transactions.map{|transaction| Transaction.new(transaction)}
   end
 
+  def transaction_count()
+    sql = "SELECT COUNT(*) from transactions WHERE tag_id = $1"
+    values = [@id]
+    transactions = SqlRunner.run(sql, values)
+    return transactions[0]["count"]
+  end
+
 end

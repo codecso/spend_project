@@ -14,12 +14,16 @@
         <th>Merchant ID</th>
         <th></th>
         <th>Merchant</th>
+        <th></th>
+        <th># of Transactions</th>
       </tr>
 
       <tr>
         <td><%= @merchant.id %></td>
         <td></td>
         <td><%= @merchant.name %></td>
+        <td></td>
+        <td><%= @merchant.transaction_count%></td>
         <td></td>
         <td>
           <form action="/merchants/<%=@merchant.id%>/edit" method="GET">
