@@ -1,12 +1,26 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
 .top_info{
   background-color: green;
+}
+
+.top_info a{
   color: white;
 }
 
 .bottom_footer{
   position: fixed;
   bottom: 0;
+  width: 100%;
   background-color: green;
+  color: white;
+}
+
+.bottom_footer a{
   color: white;
 }
 
@@ -28,7 +42,6 @@ ul li{
 
 ul li a{
   font-size: 18px;
-  font-weight: bold;
 }
 
 p {
