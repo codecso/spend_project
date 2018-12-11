@@ -19,6 +19,7 @@ post '/tags' do
 end
 
 get '/tags/:id' do
+  @tags = Tag.all()
   @tag = Tag.find(params['id'])
   erb(:"tags/show")
 end
@@ -26,6 +27,11 @@ end
 get '/tags/:id/edit' do
   @tag = Tag.find(params['id'])
   erb(:"tags/edit")
+end
+
+get '/tags/:id/transactions' do
+  @tag = Tag.find(params['id'])
+  erb(:"tags/tag_transactions")
 end
 
 post '/tags/:id' do

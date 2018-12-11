@@ -28,6 +28,11 @@ get '/merchants/:id/edit' do
   erb(:"merchants/edit")
 end
 
+get '/merchants/:id/transactions' do
+  @merchant = Merchant.find(params['id'])
+  erb(:"merchants/merchant_transactions")
+end
+
 post '/merchants/:id' do
   merchant = Merchant.new(params)
   merchant.update()

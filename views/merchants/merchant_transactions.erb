@@ -6,45 +6,47 @@
 </div>
 
 <div class="container">
-  <h1>Tag: <%=@tag.name%></h1>
+  <h1><%=@merchant.name%> Transactions</h1>
 
   <div class="table_container">
     <table>
       <tr>
+        <th>Transaction ID</th>
         <th></th>
+        <th>Date</th>
         <th></th>
-        <th>Tag ID</th>
+        <th>Merchant</th>
         <th></th>
-        <th>Tag</th>
+        <th>Tags</th>
         <th></th>
-        <th># of Transactions</th>
+        <th>Amount</th>
       </tr>
 
+        <% for transaction in @merchant.transactions %>
       <tr>
-        <td>
-          <form action="/tags/<%=@tag.id%>/transactions" method="GET">
-            <input type="submit" value="view transactions">
-          </form>
-        </td>
+        <td><%= transaction.id %></td>
         <td></td>
-        <td><%= @tag.id %></td>
+        <td><%= transaction.timing %></td>
         <td></td>
-        <td><%= @tag.name %></td>
+        <td><%= transaction.merchant.name %></td>
         <td></td>
-        <td><%= @tag.transaction_count%></td>
+        <td><%= transaction.tag.name %></td>
+        <td></td>
+        <td><%= transaction.amount %></td>
         <td></td>
         <td>
-          <form action="/tags/<%=@tag.id%>/edit" method="GET">
+          <form action="/transactions/<%=transaction.id%>/edit" method="GET">
             <input type="submit" value="edit">
           </form>
         </td>
         <td></td>
         <td>
-          <form action="/tags/<%=@tag.id%>/delete" method="POST">
+          <form action="/transactions/<%=transaction.id%>/delete" method="POST">
             <input type="submit" value="delete">
           </form>
         </td>
       </tr>
+      <% end %>
 
     </table>
   </div>

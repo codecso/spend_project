@@ -11,6 +11,8 @@
   <div class="table_container">
     <table>
       <tr>
+        <th></th>
+        <th></th>
         <th>Merchant ID</th>
         <th></th>
         <th>Merchant</th>
@@ -19,6 +21,12 @@
       </tr>
 
       <tr>
+        <td>
+          <form action="/merchants/<%=@merchant.id%>/transactions" method="GET">
+            <input type="submit" value="view transactions">
+          </form>
+        </td>
+        <td></td>
         <td><%= @merchant.id %></td>
         <td></td>
         <td><%= @merchant.name %></td>
