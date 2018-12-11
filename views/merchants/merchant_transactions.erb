@@ -48,6 +48,22 @@
       </tr>
       <% end %>
 
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Total</td>
+        <td></td>
+        <% total = 0 %>
+        <% for transaction in @merchant.transactions %>
+        <% total = total + transaction.amount() %>
+        <% end %>
+        <td><%=total%></td>
+      </tr>
+
     </table>
   </div>
 </div>

@@ -34,6 +34,11 @@ get '/transactions/:id/edit' do
   erb(:"transactions/edit")
 end
 
+post '/transactions/ascending' do
+
+  redirect to ('/transactions')
+end
+
 post '/transactions/:id' do
   Transaction.new(params).update()
   redirect to "/transactions"
