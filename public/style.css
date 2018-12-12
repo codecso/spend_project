@@ -1,6 +1,7 @@
 body{
   margin: 0px;
   padding: 0px;
+  padding-bottom: 204px; /* Height of Footer */
   border: 0px;
   background-image: url('/images/green_background.png');
   fill: green;
@@ -14,13 +15,14 @@ body{
 }
 
 .top_info{
+  font-family: Montserrat;
   background-color: green;
+  font-size: 18px;
   width: 100%;
 }
 
 .top_info a{
   text-decoration: none;
-  font-size: 20px;
   color: white;
   padding-left: 5px;
 }
@@ -35,6 +37,7 @@ body{
   bottom: 0;
   width: 100%;
   background-color: green;
+  font-family: Montserrat;
   color: white;
 }
 
@@ -54,8 +57,18 @@ body{
 }
 
 .title_container{
+  font-family: Montserrat;
   background-color: white;
 }
+
+.details_container{
+  background-color: white;
+}
+
+.details_container p{
+  font-family: Montserrat;
+}
+
 .table_container{
   background-color: white;
 }
@@ -73,12 +86,28 @@ body{
 }
 
 .enter_tracker_container a{
+  font-family: Montserrat;
   text-decoration: none;
   color: white;
 }
 
 .table_container{
   display: inline-block;
+}
+
+.help_transactions_links{
+  float: left;
+  background-color: white;
+}
+
+.help_merchants_links{
+  display: flex;
+  background-color: white;
+}
+
+.help_tags_links{
+  display: flex;
+  background-color: white;
 }
 
 ul li{
