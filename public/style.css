@@ -61,14 +61,6 @@ body{
   background-color: white;
 }
 
-.details_container{
-  background-color: white;
-}
-
-.details_container p{
-  font-family: Montserrat;
-}
-
 .table_container{
   background-color: white;
 }
@@ -95,20 +87,34 @@ body{
   display: inline-block;
 }
 
-.help_transactions_links{
-  float: left;
+.menu_links{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+.menu_links ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu_links div {
+  background-color: white;
+  margin: 0 20px;
+}
+
+.details_container{
   background-color: white;
 }
 
-.help_merchants_links{
-  display: flex;
-  background-color: white;
+.details_container p{
+  font-family: Montserrat;
 }
 
-.help_tags_links{
-  display: flex;
-  background-color: white;
-}
+
 
 ul li{
   overflow: hidden;
