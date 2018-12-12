@@ -41,6 +41,16 @@ body{
   color: white;
 }
 
+.bottom_footer ul{
+  margin: 0px;
+  padding: 0px;
+  width: 200px;
+}
+
+.bottom_footer p{
+  width: 200px;
+}
+
 .bottom_footer a{
   text-decoration: none;
   color: white;
@@ -50,6 +60,9 @@ body{
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.bottom_info_links{
 }
 
 .container{
@@ -113,8 +126,6 @@ body{
 .details_container p{
   font-family: Montserrat;
 }
-
-
 
 ul li{
   overflow: hidden;
