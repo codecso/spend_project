@@ -5,7 +5,7 @@ Time Allowance:
 
 Table:
 - MVP (Original)
-- Extensions (Extensions)
+- Extensions (Original)
 - Incomplete Originals
 - Status
 - Tech Stack
