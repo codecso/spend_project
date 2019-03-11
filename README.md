@@ -2,11 +2,14 @@
 - Time Allowance: 7th December, 2018 - 12th December, 2018
 
 ## Table
+- Running Application
 - MVP (Original)
 - Extensions (Original)
 - Incomplete Originals
 - Status
 - Tech Stack
+
+## Running Application
 
 ## MVP (Original)
 - The app should allow the user to create, edit and delete merchants, e.g. Tesco, Amazon, ScotRail. ✓
