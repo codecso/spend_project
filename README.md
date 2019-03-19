@@ -10,6 +10,12 @@
 - Tech Stack
 
 ## Running Application
+- cd into spend_app and open up multiple tabs for the respective commands.
+1. createdb spend
+2. psql -d spend -f db/spend.sql
+3. ruby db/seeds.rb
+4. ruby app.rb
+5. Open up in your browser: https://localhost:4567
 
 ## MVP (Original)
 - The app should allow the user to create, edit and delete merchants, e.g. Tesco, Amazon, ScotRail. ✓
