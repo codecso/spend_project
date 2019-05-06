@@ -35,4 +35,4 @@
 - Project Incomplete (MVP Achieved)
 
 ## Tech Stack
-- Ruby, PostgreSQL, HTML and CSS
+- Ruby, Sinatra, PostgreSQL, HTML and CSS
