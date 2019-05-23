@@ -15,7 +15,7 @@
 2. psql -d spend -f db/spend.sql
 3. ruby db/seeds.rb
 4. ruby app.rb
-5. Open up in your browser: https://localhost:4567
+5. Open up in your browser: http://localhost:4567
 
 ## MVP (Original)
 - The app should allow the user to create, edit and delete merchants, e.g. Tesco, Amazon, ScotRail. ✓
@@ -35,4 +35,4 @@
 - Project Incomplete (MVP Achieved)
 
 ## Tech Stack
-- Ruby, Sinatra, PostgreSQL, HTML and CSS
+- Ruby, Sinatra, PostgreSQL, HTML5 and CSS3
